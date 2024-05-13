@@ -39,7 +39,7 @@ for (let payment of payments) {
 
 // Write to file
 const result = Object.values(balance);
-fs.writeFile(balancePath, JSON.stringify(result), (err) => {
+fs.writeFile(balancePath, JSON.stringify(result, null, '\t'), (err) => {
   if (err) console.log(err);
   console.log('done');
 });
